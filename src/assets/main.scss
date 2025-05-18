@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+@font-face {
+  font-family: 'Graffity-fill';
+  src: url('../assets/fonts/Graffity-fill.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --accent-color: #cccccc;
+  --error-color: #d32f2f;
+  --button-hover-color: #888888;
+  --font-base: 1em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: 'Space Mono', monospace;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Michroma', sans-serif;
+  }
+
+  button {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    width: 100px;
+    padding: 10px;
+  }
+}
