@@ -10,9 +10,6 @@
 @font-face {
   font-family: 'Graffity-fill';
   src: url('../assets/fonts/Graffity-fill.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 
 :root {
@@ -24,9 +21,24 @@
   --font-base: 1em;
 }
 
+html,
 body {
+  height: auto;
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-family: 'Space Mono', monospace;
@@ -34,7 +46,8 @@ body {
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  nav {
     font-family: 'Michroma', sans-serif;
   }
 
@@ -45,5 +58,11 @@ body {
     border: 1px solid var(--primary-color);
     width: 100px;
     padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: gray;
+      border: 1px solid gray;
+    }
   }
 }
