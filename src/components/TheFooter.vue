@@ -23,22 +23,23 @@
 
 <style lang="scss" scoped>
 .footer {
-  background-image: url('/src/assets/footer-background.png');
+  background-image: url('/src/assets/backgrounds/footer-background.png');
   background-size: cover;
   background-position: center;
-  padding: 2rem 1rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 50px;
+  height: auto;
 }
 
 .thank-you {
   font-family: 'Graffity-fill';
   font-size: 10em;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  margin-top: -60px;
+  z-index: 1;
 }
 
 .links {
@@ -46,6 +47,9 @@
   flex-direction: column;
   a {
     color: white;
+    &:hover {
+      color: black;
+    }
     .material-symbols-outlined {
       vertical-align: middle;
     }
@@ -55,9 +59,10 @@
 .left {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 
 .right {
-  margin-top: 75px;
+  padding: 4rem;
 }
 </style>
