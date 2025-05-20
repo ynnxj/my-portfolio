@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="header" id="header">
     <!-- Header Background Image -->
@@ -10,6 +8,7 @@
       loading="lazy"
     />
 
+    <!-- Left text decoration -->
     <div class="left-text">
       <span>front</span>
       <span>end</span>
@@ -22,11 +21,12 @@
     <!-- Transparent Logo -->
     <img
       class="logo"
-      src="/src/assets/logo.PNG"
-      alt="Jennifer Nilsson's Jenny logo"
+      src="/src/components/icons/logo.PNG"
+      alt="Jennifer Nilsson's -Jenny- logo"
       loading="lazy"
     />
 
+    <!-- Right text decoration -->
     <div class="right-text">
       <div>
         <p>Jennifer</p>
@@ -42,13 +42,14 @@
 
 <style lang="scss" scoped>
 .header {
+  position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  position: relative;
+  overflow: hidden;
+  z-index: 1;
 
   .header-img {
     position: absolute;
@@ -62,28 +63,28 @@
   }
 
   .left-text {
-    justify-self: center;
-    display: flex;
     position: relative;
     top: 10rem;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .right-text {
-    justify-self: center;
-    text-align: center;
-    position: relative;
-    bottom: 10rem;
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    justify-self: center;
+    gap: 10px;
   }
 
   .logo {
     width: 70rem;
     justify-self: center;
     margin: 0 auto;
+  }
+
+  .right-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    bottom: 10rem;
+    font-size: 1.5rem;
   }
 }
 </style>
