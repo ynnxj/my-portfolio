@@ -5,6 +5,10 @@ import { artworks } from '@/data/artworks'
 import { onMounted } from 'vue'
 import gsap from 'gsap'
 
+/**
+ * Animation using GSAP for portrait.
+ * Yoyo animation.
+ */
 onMounted(() => {
   gsap.to('.portrait', {
     rotation: 3,
@@ -24,26 +28,35 @@ function openLink(url: string) {
 
 <template>
   <main>
+    <!-- Header -->
     <TheHeader />
+
+    <!-- About Section -->
     <section class="about-section" id="about-section">
       <img class="portrait" src="/src/assets/portraits/portrait-1.PNG" />
       <img class="star-graphic" src="../components/icons/bigger-star.png" />
       <img class="tiny-star-graphic" src="../components/icons/tiny-star.png" />
 
+      <!-- About Me -->
       <div class="wrapper">
         <article class="about-text">
           <h2>About me</h2>
+          <p class="bold">Hello there!</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum. I’m passionate about crafting clean, user-friendly
-            interfaces, and I’ve taken a UX design course to better understand how users think and
-            interact with digital products.
+            I'm Jennifer Nilsson, a front-end student based in Stockholm, Sweden, currently studying
+            at Medieinstitutet. I love illustrating and all forms of art. I believe creativity —
+            whether visual or otherwise — has really helped me think differently when solving
+            problems, while keeping a clean and easy approach to structure.
+          </p>
+          <p>
+            When I’m not coding, you’ll probably find me sketching, gaming, or researching my next
+            computer parts. And when I <span class="italic">am</span> coding, it’s usually with a
+            cold glass of iced matcha latte and cozy Animal Crossing music playing in the
+            background.🌸
           </p>
         </article>
+
+        <!-- Tech Stack -->
         <article class="technical-text">
           <span>
             <h3>Languages</h3>
@@ -85,9 +98,11 @@ function openLink(url: string) {
       <img class="lines-graphic" src="../components/icons/lines.svg" />
     </section>
 
+    <!-- Projects Section -->
     <section class="project-section">
       <h2>Projects</h2>
 
+      <!-- List Projects here -->
       <article v-for="project in projects" :key="project.id" class="project">
         <img :src="project.image" :alt="project.title" />
         <div>
@@ -101,20 +116,21 @@ function openLink(url: string) {
       <img class="tiny-star-graphic" src="../components/icons/tiny-star.png" />
     </section>
 
+    <!-- Creative work Section -->
     <section class="creative-work-section">
       <article class="text-section">
         <h2>Creative work</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
+          When I’m not building sick web applications (hehe), I love illustrating! My passion for
+          art has influenced not only my visual creativity but also my approach to problem-solving
+          with a creative mindset. I'd like to believe that having an eye for details helps me in
+          both design and development, and I find it really fulfilling to bring ideas to life —
+          whether through code, art, or anything in between!
         </p>
         <img class="star-graphic" src="../components/icons/bigger-star.png" />
       </article>
 
+      <!-- Artwork -->
       <article v-for="artwork in artworks" :key="artwork.id" class="artwork-section">
         <img class="artwork" :src="artwork.image" :alt="artwork.alt" />
       </article>
@@ -123,22 +139,6 @@ function openLink(url: string) {
 </template>
 
 <style lang="scss" scoped>
-main {
-  h2 {
-    font-size: 2em;
-    margin-top: 5rem;
-  }
-  h3 {
-    font-size: 1.5em;
-  }
-  p {
-    font-size: 1em;
-  }
-  img {
-    width: 500px;
-  }
-}
-
 section {
   margin: 0 125px;
 }
@@ -150,6 +150,11 @@ section {
   gap: 5rem;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
+
+  .portrait {
+    position: relative;
+    margin: 5rem 1rem;
+  }
 
   .star-graphic {
     position: absolute;
@@ -169,22 +174,26 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    .bold {
+      font-weight: 600;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .technical-text {
+      display: flex;
+      flex-direction: row;
+      gap: 17rem;
+    }
   }
 
-  .portrait {
-    position: relative;
-    margin: 5rem 1rem;
-  }
-
-  .technical-text {
-    display: flex;
-    flex-direction: row;
-    gap: 18rem;
-  }
   .lines-graphic {
     position: absolute;
     width: 1000px;
-    bottom: -130px;
+    bottom: -170px;
     left: 920px;
     z-index: 10;
   }
