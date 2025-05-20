@@ -9,7 +9,7 @@
     <div class="portrait-section">
       <img src="../assets/portraits/portrait-2.png" />
     </div>
-    <img class="frog-boy" src="../assets/creative-work/frog-boy-black.gif" />
+    <img class="frog-boy" src="/assets/creative-work/frog-boy-black.gif" />
   </section>
 </template>
 
