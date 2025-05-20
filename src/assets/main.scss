@@ -1,31 +1,11 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-
-@font-face {
-  font-family: 'Graffity-fill';
-  src: url('../assets/fonts/Graffity-fill.woff') format('woff');
-}
-
-:root {
-  --primary-color: #ffffff;
-  --secondary-color: #000000;
-  --accent-color: #cccccc;
-  --error-color: #d32f2f;
-  --button-hover-color: #888888;
-  --font-base: 1em;
-}
-
-html,
-body {
-  height: auto;
-  margin: 0;
-  overflow-x: hidden;
 }
 
 #app {
@@ -36,33 +16,4 @@ body {
 
 main {
   flex-grow: 1;
-}
-
-body {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-family: 'Space Mono', monospace;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  nav {
-    font-family: 'Michroma', sans-serif;
-  }
-
-  button {
-    font-family: 'Space Mono', monospace;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    width: 100px;
-    padding: 10px;
-    cursor: pointer;
-
-    &:hover {
-      color: gray;
-      border: 1px solid gray;
-    }
-  }
 }
