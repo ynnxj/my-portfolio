@@ -33,9 +33,21 @@ function openLink(url: string) {
 
     <!-- About Section -->
     <section class="about-section" id="about-section">
-      <img class="portrait" src="/src/assets/portraits/portrait-1.PNG" />
-      <img class="star-graphic" src="../components/icons/bigger-star.png" />
-      <img class="tiny-star-graphic" src="../components/icons/tiny-star.png" />
+      <img
+        class="portrait"
+        src="/src/assets/portraits/portrait-1.PNG"
+        alt="A portrait of a woman with black hair hand bangs. Only the head is cut out"
+      />
+      <img
+        class="star-graphic"
+        src="../components/icons/bigger-star.png"
+        alt="A hand drawn star shape"
+      />
+      <img
+        class="tiny-star-graphic"
+        src="../components/icons/tiny-star.png"
+        alt="A tiny hand drawn star shape"
+      />
 
       <!-- About Me -->
       <div class="wrapper">
@@ -95,7 +107,11 @@ function openLink(url: string) {
           </p>
         </article>
       </div>
-      <img class="lines-graphic" src="../components/icons/lines.svg" />
+      <img
+        class="lines-graphic"
+        src="../components/icons/lines.svg"
+        alt="Squiggly lines in a purple hue."
+      />
     </section>
 
     <!-- Projects Section -->
@@ -113,7 +129,11 @@ function openLink(url: string) {
         </div>
       </article>
 
-      <img class="tiny-star-graphic" src="../components/icons/tiny-star.png" />
+      <img
+        class="tiny-star-graphic"
+        src="../components/icons/tiny-star.png"
+        alt="A tiny hand drawn star shape"
+      />
     </section>
 
     <!-- Creative work Section -->
@@ -127,7 +147,11 @@ function openLink(url: string) {
           both design and development, and I find it really fulfilling to bring ideas to life —
           whether through code, art, or anything in between!
         </p>
-        <img class="star-graphic" src="../components/icons/bigger-star.png" />
+        <img
+          class="star-graphic"
+          src="../components/icons/bigger-star.png"
+          alt="A hand drawn star shape"
+        />
       </article>
 
       <!-- Artwork -->
