@@ -16,7 +16,7 @@ export const projects: Project[] = [
     image: import.meta.env.BASE_URL + 'assets/projects/bookhaus-preview.png',
     description:
       'This was my first experience working with backend during an API course. My group and I created databases, and I was responsible for implementing the user authentication system, including login, logout, and registration. Connecting backend with frontend was challenging but very rewarding, for sure.',
-    demoLink: '#',
+    demoLink: 'https://bookhaus-fullstack-iycx.vercel.app/',
     githubLink: 'https://github.com/ynnxj/bookhaus-fullstack',
   },
   {
