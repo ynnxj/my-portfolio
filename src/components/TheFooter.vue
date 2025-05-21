@@ -4,15 +4,19 @@
     <!-- Left Section  -->
     <div class="left">
       <span class="thank-you"> Thank You </span>
-      <span class="copyright">Copyright 2025 Jennifer Nilsson</span>
+      <span class="copyright">Copyright 2025, Jennifer Nilsson</span>
     </div>
 
     <!-- Right Section -->
     <div class="right">
       <!-- Links -->
       <span class="links">
-        <a href="url">LinkedIn<span class="material-symbols-outlined"> trending_flat </span></a>
-        <a href="url">GitHub<span class="material-symbols-outlined"> trending_flat </span></a>
+        <a href="https://www.linkedin.com/in/jennifer-m-nilsson/"
+          >LinkedIn<span class="material-symbols-outlined"> trending_flat </span></a
+        >
+        <a href="https://github.com/ynnxj"
+          >GitHub<span class="material-symbols-outlined"> trending_flat </span></a
+        >
       </span>
 
       <!-- Email -->
