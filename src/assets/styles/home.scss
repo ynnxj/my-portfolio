@@ -205,6 +205,7 @@ section {
 
   .creative-work-section {
     flex-direction: column;
+
     .artwork-scroll-container {
       margin-bottom: 5rem;
 
@@ -294,7 +295,8 @@ section {
     }
   }
 
-  Projects Section .project-section {
+  //Projects Section
+  .project-section {
     margin: 3rem 0;
     padding: 0;
 
