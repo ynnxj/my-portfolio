@@ -1,0 +1,353 @@
+@import '@/assets/variables';
+
+// Home Page
+.responsive {
+  display: none;
+}
+
+section {
+  margin: 0 6rem;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+// About Section
+.about-section {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  gap: 5rem;
+  border-bottom: 1px solid $primary-color;
+  border-top: 1px solid $primary-color;
+
+  .portrait {
+    max-width: 450px;
+    margin: 4rem;
+    padding: 0;
+  }
+
+  .star-graphic {
+    position: absolute;
+    width: 100px;
+    top: 20%;
+    left: 0;
+    z-index: 10;
+  }
+
+  .tiny-star-graphic {
+    position: absolute;
+    width: 40px;
+    top: 40%;
+    left: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .bold {
+      font-weight: 600;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .technical-text {
+      display: flex;
+      flex-direction: row;
+      gap: 6rem;
+    }
+
+    .backend-text {
+      padding-bottom: 5rem;
+    }
+  }
+
+  .lines-graphic {
+    position: absolute;
+    width: 65%;
+    bottom: -20%;
+    left: 50%;
+    z-index: 10;
+  }
+}
+
+// Projects Section
+.project-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  border-bottom: 1px solid $primary-color;
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+
+    &:last-of-type {
+      margin-bottom: 7rem;
+    }
+
+    h3 {
+      margin: 0;
+    }
+    button {
+      position: relative;
+      z-index: 10;
+    }
+
+    button:first-of-type {
+      margin-right: 1rem;
+    }
+  }
+
+  .tiny-star-graphic {
+    width: 40px;
+    position: absolute;
+    right: 10%;
+    bottom: 7rem;
+    z-index: 1;
+  }
+}
+
+// Creative Work Section
+.creative-work-section {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  gap: 5rem;
+  text-align: center;
+
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+
+// Artwork
+.artwork-section {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  .artwork {
+    width: 200px;
+  }
+}
+
+.star-graphic {
+  display: block;
+  position: absolute;
+  margin-left: 5%;
+  margin-right: auto;
+  width: auto;
+}
+
+// Tablet
+@media (max-width: 1468px) {
+  section {
+    margin: 0 1rem;
+  }
+
+  .lines-graphic {
+    bottom: -7% !important;
+    left: 40% !important;
+  }
+
+  .star-graphic,
+  .tiny-star-graphic {
+    margin-left: 5rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'a b'
+      'c c'
+      'd d';
+    justify-content: center;
+    align-items: center;
+  }
+
+  .responsive {
+    display: block;
+    width: 80%;
+    min-width: 200px;
+    grid-area: a;
+  }
+
+  .about-text {
+    grid-area: b;
+    padding-right: 3rem;
+  }
+
+  .technical-text {
+    grid-area: c;
+    justify-content: center;
+  }
+
+  .backend-text {
+    grid-area: d;
+    padding-bottom: 3rem;
+    margin-left: 4rem;
+  }
+
+  .project {
+    gap: 3rem !important;
+  }
+
+  .creative-work-section {
+    flex-direction: column;
+    .artwork-scroll-container {
+      margin-bottom: 5rem;
+
+      .artwork-section {
+        flex: 0 0 auto;
+        width: 200px;
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 896px) {
+  .tiny-star-graphic,
+  .lines-graphic {
+    display: none;
+  }
+
+  .star-graphic {
+    left: -15% !important;
+  }
+
+  section {
+    margin: 0 1.5rem;
+    font-size: 0.7rem;
+
+    h2 {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  // About Section
+  .about-section {
+    padding: 2rem 0;
+
+    section {
+      margin: 0 1rem;
+    }
+
+    .wrapper {
+      text-align: center;
+      align-items: center;
+      display: flex !important;
+      gap: 2rem;
+
+      .portrait {
+        width: 90%;
+        min-width: 200px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .about-text,
+      .backend-text {
+        padding: 0;
+        margin: 0;
+      }
+
+      .technical-text {
+        flex-direction: column;
+        gap: 1rem;
+        border: 1px solid $primary-color;
+        padding: 1rem 5rem;
+        font-size: 0.9rem;
+
+        span {
+          border-bottom: 3px solid $primary-color;
+          &:last-of-type {
+            border-bottom: none;
+          }
+        }
+
+        ul {
+          list-style-position: inside;
+          text-align: left;
+
+          li:last-of-type {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+
+      .backend-text {
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  Projects Section .project-section {
+    margin: 3rem 0;
+    padding: 0;
+
+    .project {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      p {
+        margin: 2rem;
+      }
+    }
+  }
+
+  // Creative Work Section
+  .creative-work-section {
+    margin: 2rem 0;
+
+    .artwork-scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+
+      max-width: 600px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .artwork-section {
+        flex: 0 0 auto;
+        width: 200px;
+
+        &:first-child {
+          margin-left: 5rem;
+        }
+
+        &:last-child {
+          margin-right: 5rem;
+        }
+
+        .artwork {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+    }
+  }
+}

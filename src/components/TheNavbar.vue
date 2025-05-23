@@ -47,63 +47,64 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+
+/**
+ * Handle mobile menu nav function.
+ * Hide links, open menu when cliking on icon, show links.
+ * Toggle hidden and no-scroll on smaller screen.
+ */
+const openMenu = () => {
+  const menu = document.getElementById('mobile-links')
+  if (menu) {
+    menu.classList.toggle('hidden')
+    document.body.classList.toggle('no-scroll')
+  }
+}
+
+/**
+ * Handle mobile menu nav links function.
+ * Close menu when cklicking on icon or links.
+ * Add hidden and remove no-scroll.
+ */
+const closeMenu = () => {
+  const menu = document.getElementById('mobile-links')
+  if (menu && !menu.classList.contains('hidden')) {
+    menu.classList.add('hidden')
+    document.body.classList.remove('no-scroll')
+  }
+}
 </script>
 
 <template>
-  <!-- Navbar w/ routerlinks -->
+  <!-- Navbar -->
   <nav id="navbar">
-    <RouterLink class="nav-icon-link" to="/">
-      <img class="nav-icon" src="./icons/star-decal.svg" alt="A white star icon." />
-    </RouterLink>
-    <span>
-      <RouterLink class="nav-link" to="/">home</RouterLink>
-      <a class="nav-link" href="#about-section" @click.prevent="handleAboutClick">about</a>
-      <RouterLink class="nav-link" to="/contact">contact</RouterLink>
-    </span>
+    <!-- Desktop/Tablet Menu -->
+    <div class="default-menu">
+      <RouterLink class="nav-icon-link" to="/">
+        <img class="nav-icon" src="./icons/star-decal.svg" alt="A white star icon." />
+      </RouterLink>
+      <span>
+        <RouterLink class="nav-link" to="/">home</RouterLink>
+        <a class="nav-link" href="#about-section" @click.prevent="handleAboutClick">about</a>
+        <RouterLink class="nav-link" to="/contact">contact</RouterLink>
+      </span>
+    </div>
+
+    <!-- Mobile Menu-->
+    <div class="mobile-menu">
+      <img
+        class="nav-icon"
+        id="menu-icon"
+        @click="openMenu()"
+        src="./icons/star-decal.svg"
+        alt="A white star icon."
+      />
+      <div id="mobile-links" class="mobile-links hidden">
+        <RouterLink class="nav-link" to="/" @click="closeMenu">home</RouterLink>
+        <RouterLink class="nav-link" to="/contact" @click="closeMenu">contact</RouterLink>
+      </div>
+    </div>
   </nav>
 </template>
 
-<style lang="scss">
-@import '@/assets/variables';
-
-nav {
-  position: fixed;
-  width: 100vw;
-  height: 70px;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-
-  &.scrolled {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  .nav-icon-link {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 2rem;
-  }
-
-  .nav-icon {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .nav-link {
-    margin-right: 80px;
-    color: $primary-color;
-    letter-spacing: 3px;
-
-    &:hover {
-      color: $accent-color;
-    }
-  }
-}
-</style>
+<style lang="scss" src="../assets/styles/navbar.scss"></style>

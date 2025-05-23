@@ -34,7 +34,7 @@ function openLink(url: string) {
     <!-- About Section -->
     <section class="about-section" id="about-section">
       <img
-        class="portrait"
+        class="portrait hidden"
         src="/src/assets/portraits/portrait-1.PNG"
         alt="A portrait of a woman with black hair hand bangs. Only the head is cut out"
       />
@@ -51,6 +51,11 @@ function openLink(url: string) {
 
       <!-- About Me -->
       <div class="wrapper">
+        <img
+          class="portrait responsive"
+          src="/src/assets/portraits/portrait-1.PNG"
+          alt="A portrait of a woman with black hair hand bangs. Only the head is cut out"
+        />
         <article class="about-text">
           <h2>About me</h2>
           <p class="bold">Hello there!</p>
@@ -155,133 +160,13 @@ function openLink(url: string) {
       </article>
 
       <!-- Artwork -->
-      <article v-for="artwork in artworks" :key="artwork.id" class="artwork-section">
-        <img class="artwork" :src="artwork.image" :alt="artwork.alt" />
-      </article>
+      <div class="artwork-scroll-container artwork-section">
+        <article v-for="artwork in artworks" :key="artwork.id">
+          <img class="artwork" :src="artwork.image" :alt="artwork.alt" />
+        </article>
+      </div>
     </section>
   </main>
 </template>
 
-<style lang="scss" scoped>
-section {
-  margin: 0 125px;
-}
-
-.about-section {
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  gap: 5rem;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-
-  .portrait {
-    position: relative;
-    margin: 5rem 1rem;
-  }
-
-  .star-graphic {
-    position: absolute;
-    width: 100px;
-    bottom: 300px;
-    left: 30px;
-  }
-
-  .tiny-star-graphic {
-    position: absolute;
-    width: 40px;
-    bottom: 600px;
-    left: 30px;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    .bold {
-      font-weight: 600;
-    }
-
-    .italic {
-      font-style: italic;
-    }
-
-    .technical-text {
-      display: flex;
-      flex-direction: row;
-      gap: 17rem;
-    }
-  }
-
-  .lines-graphic {
-    position: absolute;
-    width: 1000px;
-    bottom: -170px;
-    left: 920px;
-    z-index: 10;
-  }
-}
-
-.project-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  border-bottom: 1px solid white;
-
-  .project {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5rem;
-
-    &:last-of-type {
-      margin-bottom: 7rem;
-    }
-
-    h3 {
-      margin: 0;
-    }
-
-    button:first-of-type {
-      margin-right: 1rem;
-    }
-  }
-
-  .tiny-star-graphic {
-    width: 40px;
-    position: absolute;
-    right: 125px;
-    bottom: 7rem;
-    z-index: 10;
-  }
-}
-
-.creative-work-section {
-  display: flex;
-  align-items: flex-start;
-  align-items: center;
-  gap: 5rem;
-  text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 6rem;
-}
-
-.artwork-section {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-
-  .artwork {
-    width: 200px;
-  }
-}
-
-.star-graphic {
-  display: block;
-  margin-left: -5rem;
-  margin-right: auto;
-  width: auto;
-}
-</style>
+<style lang="scss" scoped src="@/assets/styles/home.scss"></style>

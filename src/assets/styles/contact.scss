@@ -1,0 +1,113 @@
+// Contact Page
+.contact {
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-image: url('/src/assets/backgrounds/contact-background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  // Left Section
+  .info-section,
+  .portrait-section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-section {
+    flex-direction: column;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 25%;
+      right: 0;
+      height: 50%;
+      width: 1px;
+      background-color: white;
+    }
+
+    a {
+      color: white;
+      margin-top: 0.5rem;
+
+      &:hover {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+
+  // Right Section
+  .portrait-section {
+    align-items: flex-end;
+    img {
+      width: 45%;
+      min-width: 400px;
+    }
+  }
+
+  .frog-boy {
+    position: absolute;
+    width: 350px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -1.5rem;
+    z-index: 1;
+  }
+}
+
+// Tablet
+@media (max-width: 1287px) {
+  .info-section {
+    justify-content: center;
+    padding-left: 5rem;
+  }
+
+  .portrait-section img {
+    width: 60% !important;
+    min-width: 320px;
+  }
+
+  .frog-boy {
+    width: 20% !important;
+    min-width: 200px;
+  }
+}
+
+// Mobile
+@media (max-width: 896px) {
+  .contact {
+    flex-direction: column;
+    height: 90vh;
+    padding: 2rem 1rem;
+
+    .info-section,
+    .portrait-section {
+      width: 100%;
+      flex-direction: column;
+      margin: 1rem 0;
+      padding-left: 0;
+      align-items: center;
+      text-align: center;
+    }
+
+    .info-section {
+      &::after {
+        display: none;
+      }
+    }
+
+    .portrait-section {
+      img {
+        width: 60% !important;
+        min-width: 350px;
+      }
+    }
+  }
+}
