@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: 'Quiz',
     image: import.meta.env.BASE_URL + 'assets/projects/quiz-preview.png',
     description:
-      'Our first group assignment using JavaScript — and my first experience working in a dev team. We followed the Scrum method and used a modular structure to build the app. It was a great introduction to collaborative coding, task splitting, and version control.',
+      'Our first group assignment using JavaScript, and my first experience working in a dev team. We followed the Scrum method and used a modular structure to build the app. It was a great introduction to collaborative coding, task splitting, and version control.',
     demoLink: 'https://ynnxj.github.io/quiz-web-app/',
     githubLink: 'https://github.com/ynnxj/quiz-web-app',
   },
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     title: 'Nemo (UX)',
     image: import.meta.env.BASE_URL + 'assets/projects/nemo-preview.png',
     description:
-      'Taking what we learned in our UX course, my group designed this app. We came up with an idé, focused on wireframes, visual layout, page structure, fonts, and overall branding. The result was a complete design handoff and a clear guide for the other group to implement. This project helped me understand how to think from both a user and developer perspective during the design process.',
+      'Taking what we learned in our UX course, my group designed this app. We came up with an idea, focused on wireframes, visual layout, page structure, fonts, and overall branding. The result was a complete design handoff and a clear guide for the other group to implement. This project helped me understand how to think from both a user and developer perspective during the design process.',
     demoLink: 'https://medieinstitutet.github.io/fed24d-grafiska-verktyg-clownfiskarna/',
     githubLink: 'https://github.com/Medieinstitutet/fed24d-grafiska-verktyg-clownfiskarna',
   },
