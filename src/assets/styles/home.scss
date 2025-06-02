@@ -124,6 +124,11 @@ section {
 
   margin-top: 5rem;
   margin-bottom: 6rem;
+
+  .left-arrow,
+  .right-arrow {
+    display: none;
+  }
 }
 
 // Artwork
@@ -325,8 +330,26 @@ section {
       display: flex;
       overflow-x: auto;
       gap: 1rem;
+      padding: 0 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      align-items: center;
 
-      max-width: 600px;
+      .left-arrow,
+      .right-arrow {
+        display: block;
+        animation: arrow-bounce 1.2s infinite ease-in-out;
+      }
+
+      @keyframes arrow-bounce {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(6px);
+        }
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -335,14 +358,6 @@ section {
       .artwork-section {
         flex: 0 0 auto;
         width: 200px;
-
-        &:first-child {
-          margin-left: 5rem;
-        }
-
-        &:last-child {
-          margin-right: 5rem;
-        }
 
         .artwork {
           width: 100%;

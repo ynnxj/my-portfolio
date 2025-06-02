@@ -161,9 +161,11 @@ function openLink(url: string) {
 
       <!-- Artwork -->
       <div class="artwork-scroll-container artwork-section">
+        <span class="material-symbols-outlined right-arrow"> keyboard_arrow_right </span>
         <article v-for="artwork in artworks" :key="artwork.id">
           <img class="artwork" :src="artwork.image" :alt="artwork.alt" />
         </article>
+        <span class="material-symbols-outlined left-arrow"> keyboard_arrow_left </span>
       </div>
     </section>
   </main>
