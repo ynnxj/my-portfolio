@@ -64,14 +64,6 @@ section {
       padding-bottom: 5rem;
     }
   }
-
-  .lines-graphic {
-    position: absolute;
-    width: 65%;
-    bottom: -20%;
-    left: 50%;
-    z-index: 10;
-  }
 }
 
 // Projects Section
@@ -156,11 +148,6 @@ section {
     margin: 0 1rem;
   }
 
-  .lines-graphic {
-    bottom: -7% !important;
-    left: 40% !important;
-  }
-
   .star-graphic,
   .tiny-star-graphic {
     margin-left: 5rem;
@@ -224,8 +211,7 @@ section {
 
 // Mobile
 @media (max-width: 896px) {
-  .tiny-star-graphic,
-  .lines-graphic {
+  .tiny-star-graphic {
     display: none;
   }
 

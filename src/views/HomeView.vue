@@ -91,6 +91,7 @@ function openLink(url: string) {
             <ul>
               <li>Vue</li>
               <li>Express</li>
+              <li>React (currently studying)</li>
             </ul>
           </span>
 
@@ -112,11 +113,6 @@ function openLink(url: string) {
           </p>
         </article>
       </div>
-      <img
-        class="lines-graphic"
-        src="../components/icons/lines.svg"
-        alt="Squiggly lines in a purple hue."
-      />
     </section>
 
     <!-- Projects Section -->
