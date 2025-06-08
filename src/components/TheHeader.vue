@@ -22,7 +22,7 @@
     <img
       class="logo"
       src="/src/components/icons/logo.PNG"
-      alt="Jennifer Nilsson's -Jenny- logo"
+      alt="Jennifer Nilsson's jenny-logo signature"
       loading="lazy"
     />
 
