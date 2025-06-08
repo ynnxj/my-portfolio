@@ -1,6 +1,6 @@
 // Contact Page
 .contact {
-  height: 75vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -48,35 +48,17 @@
     align-items: flex-end;
     img {
       width: 45%;
-      min-width: 400px;
+      min-width: 450px;
     }
   }
 
   .frog-boy {
     position: absolute;
-    width: 350px;
+    width: 15%;
+    min-width: 250px;
     bottom: 0;
-    right: 0;
-    margin-bottom: -1.5rem;
+    right: 5rem;
     z-index: 1;
-  }
-}
-
-// Tablet
-@media (max-width: 1287px) {
-  .info-section {
-    justify-content: center;
-    padding-left: 5rem;
-  }
-
-  .portrait-section img {
-    width: 60% !important;
-    min-width: 320px;
-  }
-
-  .frog-boy {
-    width: 20% !important;
-    min-width: 200px;
   }
 }
 
@@ -84,8 +66,7 @@
 @media (max-width: 896px) {
   .contact {
     flex-direction: column;
-    height: 90vh;
-    padding: 2rem 1rem;
+    height: 100vh;
 
     .info-section,
     .portrait-section {
@@ -98,6 +79,7 @@
     }
 
     .info-section {
+      z-index: 1;
       &::after {
         display: none;
       }
@@ -105,9 +87,15 @@
 
     .portrait-section {
       img {
-        width: 60% !important;
+        position: absolute;
+        width: 70% !important;
+        bottom: 0;
         min-width: 350px;
       }
+    }
+
+    .frog-boy {
+      display: none;
     }
   }
 }

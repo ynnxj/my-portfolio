@@ -7,6 +7,11 @@
   src: url('../assets/fonts/Graffity-fill.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'ThunderBlack';
+  src: url('../assets/fonts/Thunder-BlackLC.ttf') format('truetype');
+}
+
 // Default
 body,
 html {
@@ -39,11 +44,6 @@ h3 {
 
 p {
   font-size: 1em;
-}
-
-// Basic Styling
-img {
-  width: 500px;
 }
 
 button {
