@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import TheHeader from '../components/TheHeader.vue'
+import TheFooter from '../components/TheFooter.vue'
 import { projects } from '@/data/projects'
 import { artworks } from '@/data/artworks'
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-/**
- * Animation using GSAP for portrait.
- * Yoyo animation.
- */
+gsap.registerPlugin(ScrollTrigger)
+
 onMounted(() => {
+  // Existing portrait animation
   gsap.to('.portrait', {
     rotation: 3,
     duration: 0.8,
@@ -19,9 +20,44 @@ onMounted(() => {
     transformOrigin: '50% 100%',
   })
   gsap.set('.portrait', { rotation: -3 })
+
+  // Animate each project block individually
+  gsap.utils.toArray<HTMLElement>('.project').forEach((project, i) => {
+    gsap.from(project, {
+      scrollTrigger: {
+        trigger: project,
+        start: 'top 90%',
+        toggleActions: 'play none none reset',
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: 'power2.out',
+      delay: i * 0.1,
+    })
+  })
 })
 
-function openLink(url: string) {
+const tickerTrack = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  const track = tickerTrack.value
+  if (!track) return
+
+  const tickerWidth = track.offsetWidth / 2 // one track's width
+
+  gsap.to(track, {
+    x: -tickerWidth,
+    duration: 10,
+    repeat: -1,
+    ease: 'linear',
+    modifiers: {
+      x: gsap.utils.unitize((x) => parseFloat(x) % tickerWidth), // loop seamlessly
+    },
+  })
+})
+
+const openLink = (url: string) => {
   if (url) window.open(url, '_blank')
 }
 </script>
@@ -142,29 +178,27 @@ function openLink(url: string) {
       <article class="text-section">
         <h2>Creative work</h2>
         <p>
-          When I’m not building sick web applications (hehe), I love illustrating! My passion for
-          art has influenced not only my visual creativity but also my approach to problem-solving
-          with a creative mindset. I'd like to believe that having an eye for details helps me in
-          both design and development, and I find it really fulfilling to bring ideas to life —
-          whether through code, art, or anything in between!
+          When I’m not building sick web applications (hehe), I love illustrating! I'd like to
+          believe that having an eye for details helps me in both design and development, and I find
+          it really fulfilling to bring ideas to life — whether through code, art, or anything in
+          between!
         </p>
-        <img
-          class="star-graphic"
-          src="../components/icons/bigger-star.png"
-          alt="A hand drawn star shape"
-        />
+        <img src="/src/components/icons/sparkle-decal.svg" />
+        <img src="/src/components/icons/sparkle-decal.svg" />
+        <img src="/src/components/icons/sparkle-decal.svg" />
       </article>
 
       <!-- Artwork -->
       <div class="artwork-scroll-container artwork-section">
-        <span class="material-symbols-outlined right-arrow"> keyboard_arrow_right </span>
+        <span class="material-symbols-outlined right-arrow"> keyboard_arrow_left </span>
         <article v-for="artwork in artworks" :key="artwork.id">
           <img class="artwork" :src="artwork.image" :alt="artwork.alt" />
         </article>
-        <span class="material-symbols-outlined left-arrow"> keyboard_arrow_left </span>
+        <span class="material-symbols-outlined left-arrow"> keyboard_arrow_right </span>
       </div>
     </section>
   </main>
+  <TheFooter />
 </template>
 
 <style lang="scss" scoped src="@/assets/styles/home.scss"></style>

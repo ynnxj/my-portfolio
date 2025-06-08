@@ -5,10 +5,11 @@
   display: none;
 }
 
-section {
-  margin: 0 6rem;
-  padding: 0 20px;
-  box-sizing: border-box;
+.about-section,
+.project-section,
+.creative-work-section {
+  margin: 0 5rem;
+  padding: 5rem;
 }
 
 // About Section
@@ -84,9 +85,14 @@ section {
       margin-bottom: 7rem;
     }
 
+    img {
+      width: 500px;
+    }
+
     h3 {
       margin: 0;
     }
+
     button {
       position: relative;
       z-index: 10;
@@ -111,41 +117,46 @@ section {
   display: flex;
   align-items: flex-start;
   align-items: center;
+  justify-content: center;
+  margin: 6rem 0;
   gap: 5rem;
-  text-align: center;
-
-  margin-top: 5rem;
-  margin-bottom: 6rem;
 
   .left-arrow,
   .right-arrow {
     display: none;
   }
-}
 
-// Artwork
-.artwork-section {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
+  .text-section {
+    max-width: 700px;
 
-  .artwork {
-    width: 200px;
+    h2 {
+      margin: 0 0 1rem 0;
+    }
+
+    img {
+      padding: 1rem;
+      width: 4rem;
+    }
   }
-}
 
-.star-graphic {
-  display: block;
-  position: absolute;
-  margin-left: 5%;
-  margin-right: auto;
-  width: auto;
+  // Artwork
+  .artwork-section {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+    .artwork {
+      width: 240px;
+    }
+  }
 }
 
 // Tablet
 @media (max-width: 1468px) {
-  section {
-    margin: 0 1rem;
+  .about-section,
+  .project-section,
+  .creative-work-section {
+    text-align: center;
   }
 
   .star-graphic,
@@ -220,7 +231,6 @@ section {
   }
 
   section {
-    margin: 0 1.5rem;
     font-size: 0.7rem;
 
     h2 {
@@ -231,11 +241,7 @@ section {
 
   // About Section
   .about-section {
-    padding: 2rem 0;
-
-    section {
-      margin: 0 1rem;
-    }
+    padding: 5rem 0;
 
     .wrapper {
       text-align: center;
@@ -310,13 +316,17 @@ section {
 
   // Creative Work Section
   .creative-work-section {
-    margin: 2rem 0;
+    margin: 0;
+    padding: 0;
+
+    .text-section {
+      padding: 0 6rem;
+    }
 
     .artwork-scroll-container {
       display: flex;
       overflow-x: auto;
       gap: 1rem;
-      padding: 0 1rem;
       width: 100%;
       box-sizing: border-box;
       align-items: center;
@@ -325,6 +335,7 @@ section {
       .right-arrow {
         display: block;
         animation: arrow-bounce 1.2s infinite ease-in-out;
+        margin: 1rem;
       }
 
       @keyframes arrow-bounce {
