@@ -92,13 +92,10 @@ const closeMenu = () => {
 
     <!-- Mobile Menu-->
     <div class="mobile-menu">
-      <img
-        class="nav-icon"
-        id="menu-icon"
-        @click="openMenu()"
-        src="./icons/star-decal.svg"
-        alt="A white star icon."
-      />
+      <RouterLink to="/">
+        <img class="nav-icon" src="./icons/star-decal.svg" alt="A white star icon." />
+      </RouterLink>
+      <p class="menu-icon" id="menu-icon" @click="openMenu()">menu</p>
       <div id="mobile-links" class="mobile-links hidden">
         <RouterLink class="nav-link" to="/" @click="closeMenu">home</RouterLink>
         <RouterLink class="nav-link" to="/contact" @click="closeMenu">contact</RouterLink>

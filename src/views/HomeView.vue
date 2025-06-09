@@ -3,14 +3,14 @@ import TheHeader from '../components/TheHeader.vue'
 import TheFooter from '../components/TheFooter.vue'
 import { projects } from '@/data/projects'
 import { artworks } from '@/data/artworks'
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  // Existing portrait animation
+  // Portrait animation
   gsap.to('.portrait', {
     rotation: 3,
     duration: 0.8,
@@ -21,7 +21,6 @@ onMounted(() => {
   })
   gsap.set('.portrait', { rotation: -3 })
 
-  // Animate each project block individually
   gsap.utils.toArray<HTMLElement>('.project').forEach((project, i) => {
     gsap.from(project, {
       scrollTrigger: {
@@ -35,25 +34,6 @@ onMounted(() => {
       ease: 'power2.out',
       delay: i * 0.1,
     })
-  })
-})
-
-const tickerTrack = ref<HTMLElement | null>(null)
-
-onMounted(() => {
-  const track = tickerTrack.value
-  if (!track) return
-
-  const tickerWidth = track.offsetWidth / 2 // one track's width
-
-  gsap.to(track, {
-    x: -tickerWidth,
-    duration: 10,
-    repeat: -1,
-    ease: 'linear',
-    modifiers: {
-      x: gsap.utils.unitize((x) => parseFloat(x) % tickerWidth), // loop seamlessly
-    },
   })
 })
 

@@ -69,11 +69,22 @@ nav {
 
   .mobile-menu {
     display: flex !important;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
 
     .nav-icon {
       z-index: 1;
       width: 70px !important;
       margin: 0 1rem;
+    }
+
+    .menu-icon {
+      border: solid 2px $primary-color;
+      padding: 1rem;
+      text-decoration: underline;
+      margin: 1rem;
+      z-index: 100;
     }
 
     .mobile-links {
