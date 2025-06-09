@@ -242,6 +242,7 @@
   // About Section
   .about-section {
     padding: 5rem 0;
+    margin: 0;
 
     .wrapper {
       text-align: center;
@@ -253,13 +254,12 @@
         width: 90%;
         min-width: 200px;
         margin: 0;
-        padding: 0;
       }
 
       .about-text,
       .backend-text {
         padding: 0;
-        margin: 0;
+        margin: 2rem;
       }
 
       .technical-text {
@@ -320,7 +320,7 @@
     padding: 0;
 
     .text-section {
-      padding: 0 6rem;
+      padding: 0 3rem;
     }
 
     .artwork-scroll-container {
