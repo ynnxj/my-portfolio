@@ -3,6 +3,24 @@ import type { Project } from '@/types/Project'
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'Mångatan',
+    image: import.meta.env.BASE_URL + 'assets/projects/mangatan-preview.png',
+    description:
+      'My thesis project and first real client; a website for the band Mångatan. I handled UX, frontend, and backend using SvelteKit, TypeScript, and MongoDB. The site includes simulated features like a merch shop and contact form to showcase interactive functionality.',
+    demoLink: 'https://mangatan.vercel.app/',
+    githubLink: 'https://github.com/ynnxj/mangatan',
+  },
+  {
+    id: 2,
+    title: 'My Portfoilo',
+    image: import.meta.env.BASE_URL + 'assets/projects/portfolio-preview.png',
+    description:
+      'I decided to include my portfolio here as well, since it’s a project I built myself. The web application is created with Vue.js and TypeScript. Isn’t she pretty?!',
+    demoLink: 'https://ynnxj.github.io/my-portfolio/',
+    githubLink: 'https://github.com/ynnxj/my-portfolio',
+  },
+  {
+    id: 3,
     title: 'Lumina',
     image: import.meta.env.BASE_URL + 'assets/projects/lumina-preview.png',
     description:
@@ -11,7 +29,7 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/ynnxj/lumina',
   },
   {
-    id: 2,
+    id: 4,
     title: 'Book Haus',
     image: import.meta.env.BASE_URL + 'assets/projects/bookhaus-preview.png',
     description:
@@ -20,7 +38,7 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/ynnxj/bookhaus-fullstack',
   },
   {
-    id: 3,
+    id: 5,
     title: 'Webshop',
     image: import.meta.env.BASE_URL + 'assets/projects/webshop-preview.png',
     description:
@@ -29,7 +47,7 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/ynnxj/webshop-assigment',
   },
   {
-    id: 4,
+    id: 6,
     title: 'Quiz',
     image: import.meta.env.BASE_URL + 'assets/projects/quiz-preview.png',
     description:
@@ -38,8 +56,8 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/ynnxj/quiz-web-app',
   },
   {
-    id: 5,
-    title: 'Nemo (UX)',
+    id: 7,
+    title: 'Nemo',
     image: import.meta.env.BASE_URL + 'assets/projects/nemo-preview.png',
     description:
       'Taking what we learned in our UX course, my group designed this app. We came up with an idea, focused on wireframes, visual layout, page structure, fonts, and overall branding. The result was a complete design handoff and a clear guide for the other group to implement. This project helped me understand how to think from both a user and developer perspective during the design process.',

@@ -77,8 +77,8 @@ const openLink = (url: string) => {
           <p class="bold">Hello there!</p>
           <p>
             I'm Jennifer Nilsson, a front-end student based in Stockholm, Sweden, currently studying
-            at Medieinstitutet. I love illustrating and all forms of art. I believe creativity —
-            whether visual or otherwise — has really helped me think differently when solving
+            at Medieinstitutet. I love illustrating and all forms of art. I believe creativity,
+            whether visual or otherwise, has really helped me think differently when solving
             problems, while keeping a clean and easy approach to structure.
           </p>
           <p>
@@ -96,7 +96,6 @@ const openLink = (url: string) => {
             <ul>
               <li>HTML</li>
               <li>CSS</li>
-              <li>Sass</li>
               <li>JavaScript</li>
               <li>TypeScript</li>
             </ul>
@@ -105,9 +104,10 @@ const openLink = (url: string) => {
           <span>
             <h3>Frameworks</h3>
             <ul>
-              <li>Vue</li>
+              <li>Vue.js</li>
+              <li>React</li>
+              <li>SvelteKit</li>
               <li>Express</li>
-              <li>React (currently studying)</li>
             </ul>
           </span>
 
@@ -158,10 +158,8 @@ const openLink = (url: string) => {
       <article class="text-section">
         <h2>Creative work</h2>
         <p>
-          When I’m not building sick web applications (hehe), I love illustrating! I'd like to
-          believe that having an eye for details helps me in both design and development, and I find
-          it really fulfilling to bring ideas to life — whether through code, art, or anything in
-          between!
+          When I’m not building sick web applications (hehe), I love illustrating! I find it really
+          fulfilling to bring ideas to life, whether through code, art, or anything in between.
         </p>
         <img src="/src/components/icons/sparkle-decal.svg" />
         <img src="/src/components/icons/sparkle-decal.svg" />
