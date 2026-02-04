@@ -4,7 +4,7 @@
     <!-- Left Section  -->
     <div class="left">
       <img class="thank-you" src="../assets/fonts/thank-you.svg" />
-      <span class="copyright">Copyright 2025, Jennifer Nilsson</span>
+      <span class="copyright">Copyright 2026, Jennifer Nilsson</span>
     </div>
 
     <!-- Right Section -->
