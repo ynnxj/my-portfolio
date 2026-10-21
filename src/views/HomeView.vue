@@ -2,10 +2,10 @@
 import TheHeader from '../components/TheHeader.vue'
 import TheFooter from '../components/TheFooter.vue'
 import { projects } from '@/data/projects'
-import { artworks } from '@/data/artworks'
 import { onMounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import TheCarousel from '@/components/TheCarousel.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -167,12 +167,8 @@ const openLink = (url: string) => {
       </article>
 
       <!-- Artwork -->
-      <div class="artwork-scroll-container artwork-section">
-        <span class="material-symbols-outlined right-arrow"> keyboard_arrow_left </span>
-        <article v-for="artwork in artworks" :key="artwork.id">
-          <img class="artwork" :src="artwork.image" :alt="artwork.alt" />
-        </article>
-        <span class="material-symbols-outlined left-arrow"> keyboard_arrow_right </span>
+      <div class="carousel-wrapper">
+        <TheCarousel />
       </div>
     </section>
   </main>
