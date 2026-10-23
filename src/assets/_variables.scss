@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Saint Regular;
+  src: url(./fonts/Saint-regular.ttf);
+}
+
 // Colors
 $primary-color: #ffffff;
 $secondary-color: #000000;
@@ -7,3 +12,4 @@ $accent-color: #cccccc;
 $font-base: 1em;
 $font-family-base: 'Space Mono', monospace;
 $font-family-headings: 'Michroma', sans-serif;
+$font-family-logo: 'Saint Regular', sans-serif;
