@@ -1,6 +1,13 @@
+<script setup lang="ts">
+import TheBackground from '@/components/TheBackground.vue'
+</script>
+
 <template>
   <main>
     <section class="contact">
+      <div class="contact-bg">
+        <TheBackground color1="#b1b1b1" color2="#000000" color3="#515151" />
+      </div>
       <div class="info-section">
         <h1>Contact me</h1>
         <p>jennifer.maritza.nilsson@gmail.com</p>
