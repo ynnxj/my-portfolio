@@ -76,10 +76,10 @@ const openLink = (url: string) => {
           <h2>About me</h2>
           <p class="bold">Hello there!</p>
           <p>
-            I'm Jennifer Nilsson, a front-end student based in Stockholm, Sweden, currently studying
-            at Medieinstitutet. I love illustrating and all forms of art. I believe creativity,
-            whether visual or otherwise, has really helped me think differently when solving
-            problems, while keeping a clean and easy approach to structure.
+            I'm Jennifer "YNNXJ" Nilsson, a junior frontend developer based in Stockholm, Sweden. I
+            love illustrating and all forms of art. I believe creativity, whether visual or
+            otherwise, has really helped me think differently when solving problems, while keeping a
+            clean and easy approach to structure.
           </p>
           <p>
             When I’m not coding, you’ll probably find me sketching, gaming, or researching my next

@@ -81,7 +81,7 @@ const closeMenu = () => {
     <!-- Desktop/Tablet Menu -->
     <div class="default-menu">
       <RouterLink class="nav-icon-link" to="/">
-        <img class="nav-icon" src="./icons/star-decal.svg" alt="A white star icon." />
+        <img class="nav-icon" src="./icons/logo.PNG" alt="Jennifer YNNXJ Nilsson Logo" />
       </RouterLink>
       <span>
         <RouterLink class="nav-link" to="/">home</RouterLink>

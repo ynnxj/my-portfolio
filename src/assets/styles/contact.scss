@@ -4,11 +4,18 @@
   width: 100vw;
   display: flex;
   flex-direction: row;
-  background-image: url('/src/assets/backgrounds/contact-background.jpg');
-  background-size: cover;
-  background-position: center;
   position: relative;
+  z-index: 0;
+  overflow: hidden;
 
+  .contact-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
   // Left Section
   .info-section,
   .portrait-section {
